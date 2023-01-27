@@ -18,7 +18,6 @@ public class BusDemo
         for(Bus b:buses)
         {
             b.displayBusinfo();
-            System.out.println("test");
         }
         while(userOpt==1) {
             System.out.println("Press 1 to Booking and 2 to Exit");
