@@ -1,4 +1,4 @@
-package BusBooking;
+package busbooking;
 
 public class Bus
 {

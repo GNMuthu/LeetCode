@@ -1,17 +1,10 @@
-package BusBooking;
+package busbooking;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class BusDemo
 {
-    public static void main(String[] args)
+    public void mainMethod(ArrayList<Bus> buses, ArrayList<Booking> bookings)
     {
-        ArrayList<Bus> buses=new ArrayList<Bus>();
-        ArrayList<Booking> bookings= new ArrayList<Booking>();
-
-        buses.add(new Bus(1,true,2));
-        buses.add(new Bus(2,false,2));
-        buses.add(new Bus(3,true,2));
-
         int userOpt=1;
         Scanner sc = new Scanner(System.in);
 
@@ -24,6 +17,7 @@ public class BusDemo
             userOpt = sc.nextInt();
             if (userOpt == 1) {
                 Booking booking = new Booking();
+                booking.getVal();
                 if (booking.isAvailable(bookings, buses)) {
                     bookings.add(booking);
                     System.out.println("Your Booking is Confired");
@@ -32,6 +26,19 @@ public class BusDemo
                 }
             }
         }
+    }
+    public static void main(String[] args)
+    {
+        ArrayList<Bus> buses=new ArrayList<Bus>();
+        ArrayList<Booking> bookings= new ArrayList<Booking>();
+
+        buses.add(new Bus(1,true,2));
+        buses.add(new Bus(2,false,2));
+        buses.add(new Bus(3,true,2));
+        BusDemo obj=new BusDemo();
+        obj.mainMethod(buses, bookings);
+
+
 
     }
 }

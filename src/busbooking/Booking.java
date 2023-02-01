@@ -1,14 +1,15 @@
-package BusBooking;
+package busbooking;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.text.SimpleDateFormat.*;
+
 public class Booking
 {
     String passengerName;
     int busNo;
     Date date;
-Booking()
+
+public void getVal()
 {
     Scanner sc=new Scanner(System.in);
     System.out.println("Enter the Passenger Name: " );
@@ -23,7 +24,6 @@ Booking()
     } catch (ParseException e) {
         throw new RuntimeException(e);
     }
-
 }
     public boolean isAvailable(ArrayList<Booking> bookings, ArrayList<Bus>buses)
     {
