@@ -10,7 +10,8 @@ public class studDataProcessing
     public void StudMarkResult()
     {
         std.total=std.Tamil+std.Eng+std.Major+std.Allied+std.majorPractical;
-        std.Average= Double.valueOf(std.total/6);
+        System.out.println(std.total);
+        std.Average= (double)std.total/6;
         if(std.Tamil>=40 && std.Eng>=40 && std.Major>=40 && std.Allied>=40 && std.majorPractical>=40)
             std.Result="Pass";
         else
